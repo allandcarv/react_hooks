@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'react-hooks'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
@@ -28,5 +28,7 @@ module.exports = {
     'import/prettier-default-export': 'off',
     'no-param-reassign': 'off',
     'no-console': ['error', { allow: ['tron'] }],
+    'react-hooks/rules-of-hooks': 'error', // avisa quando erro nas regras de hooks
+    'react-hooks/exhaustive-deps': 'warn', // avisa as dependencias do useEffect
   },
 };
